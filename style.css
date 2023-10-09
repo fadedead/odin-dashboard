@@ -3,6 +3,8 @@
     padding: 0;
 
     --bg-color: #e0e9f0;
+    --accent-color: #a78bfa;
+    --fg-color: #FFFAFA;
 }
 
 
@@ -20,18 +22,56 @@
 
 .sidebar {
     grid-area: sidebar;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-
-    background-color: #a78bfa;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    grid-template-rows: 10%;
+    grid-auto-rows: auto;
+    background-color: var(--accent-color);
 }
+
+.sidebar-heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    color: var(--fg-color);
+    font-weight: bold;
+}
+
+#sidebar-logo {
+    height: 4em;
+    fill: var(--fg-color);
+}
+
+
+.page-title {
+    font-size: 2em;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 12px;
+    padding-left: 12px;
+    margin: 12px;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--fg-color);
+}
+
+#nav-menu-icon {
+    height: 2rem;
+    fill: var(--fg-color);
+} 
 
 .header {
     grid-area: header;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     justify-content: center;
     align-items: center;
+    background-color: 	var(--fg-color);
 }
 
 .search {
@@ -50,6 +90,74 @@
     background-color: var(--bg-color);
 }
 
+.account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notif-icon {
+    height: 1.5em;
+    padding: 1rem;
+}
+
+.user-acc {
+    height: 2em;
+    padding: 1rem;
+    fill: var(--accent-color);
+}
+
+.acc-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 1em;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "accountprofile greetings"
+    "accountprofile username";
+}
+
+.user-icon {
+    grid-area: accountprofile;
+    justify-self: end;
+    height: 4em;
+    padding: 1rem;
+    fill: var(--accent-color);
+    overflow: unset;
+}
+
+.greetings {
+    grid-area: greetings;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.user-name {
+    grid-area: username;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.share-btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5em;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: 	var(--fg-color);
+    border: none;
+    border-radius: 24px;
+    height: 2rem;
+    width: 4rem;
+    font-weight: bold;
+}
+
 .main-page {
     grid-area: mainpage;
     display: grid;
@@ -65,7 +173,46 @@
 .projects {
     display: grid;
     grid-area: projects;
-    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    grid-template-rows: 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "projecttitle projecttitle";
+    justify-items: center;
+    align-items: center;
+
+    margin: 2rem;
+}
+
+.projects-heading {
+    grid-area: projecttitle;
+    align-self: center;
+    justify-self: start;
+    height: 10%;
+
+    font-weight: bold;
+}
+
+.project-card {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    height: 100%;
+    width: 100%;
+    background-color: var(--fg-color);
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+.project-star {
+    height: 1.5em;
+}
+
+.project-eye {
+    height: 1.5em;
+}
+
+.project-share {
+    height: 1.5em;
 }
 
 .announcements {
