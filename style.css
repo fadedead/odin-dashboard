@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Roboto;
+    src: url(./assets/Roboto-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +11,9 @@
     --accent-color: #a78bfa;
     --fg-color: #FFFAFA;
 
+    font-family: Roboto;
     /* border: solid 2px lawngreen; */
 }
-
 
 .container {
     display: grid;
@@ -139,7 +144,7 @@
     font-weight: bold;
 }
 
-.user-name {
+.greet-user {
     grid-area: username;
     font-size: 2em;
     font-weight: bold;
@@ -237,6 +242,7 @@ button {
     display: grid;
     gap: 1.2rem;
     grid-template-rows: 5vh;
+    
     margin-top: 1.5rem;
     margin-right: 1.5rem;
 }
@@ -271,7 +277,7 @@ button {
 
 .announcements-description {
     color: gray;
-    font-size: .8rem;
+    font-size: .9rem;
     padding-top: 1rem;
 }
 
